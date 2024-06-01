@@ -309,7 +309,7 @@ footer li {
 }
 
 /* hp  */
-@media (max-width: 576px) {
+@media (max-width: 400px) {
     html {
         font-size: 60%;
     }
@@ -318,4 +318,6 @@ footer li {
         padding: 35px;
         margin: 3px;
     }
+
+
 }
