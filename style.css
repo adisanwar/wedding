@@ -217,10 +217,23 @@ body {
     
 }
 
-.gifts .list-group{
+/* .gifts .list-group{
     font-size: 1.5rem;
+} */
+
+.info .card .card-gift {
+    padding: 1.5 ;
+    margin: 1.5rem;
+    margin-left: 1.5rem;
+    /* text-transform: uppercase; */
+    font-size: 1.5rem;
+
 }
 
+
+.info .card .card-gift .body {
+    font-size: 5rem;
+}
 #reactions__container {
     display: none !important;
 

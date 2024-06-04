@@ -1,445 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-envelope-heart' viewBox='0 0 16 16'%3E %3Cpath fill-rule='evenodd' d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.8 2.8 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124q.219.416.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442q.33-.421.55-.836L15 11.105V5.383l-3.002 1.801a2.8 2.8 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132'/%3E %3C/svg%3E"
-      type="image/svg+xml"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
-    <title>Edi & Dewi Wedding</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-envelope-heart' viewBox='0 0 16 16'%3E %3Cpath fill-rule='evenodd' d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.8 2.8 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124q.219.416.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442q.33-.421.55-.836L15 11.105V5.383l-3.002 1.801a2.8 2.8 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132'/%3E %3C/svg%3E"
+    type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-  <body>
-    <section
-      id="hero"
-      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
-    >
-      <main>
-        <h4>Kepada <span></span></h4>
-        <h1>Edy & Dewi</h1>
-        <p>Akan Melangsungkan Resepsi pernikahan dalam.</p>
-        <div class="simply-countdown"></div>
-        <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll(), playAudio();"><i class="bi bi-envelope"></i> Lihat Undangan</a>
-      </main>
-    </section>
-    <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top mynavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">Invitation</a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Invitation</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link active" href="#home">Home</a>
-              <a class="nav-link" href="#info">Info</a>
-              <a class="nav-link" href="#gallery">Gallery</a>
-              <a class="nav-link" href="#gifts">Gifts</a>
-            </div>
+  <title>Edi & Dewi Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section id="hero"
+    class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+    <main>
+      <h4>Kepada <span></span></h4>
+      <h1>Edy & Dewi</h1>
+      <p>Akan Melangsungkan Resepsi pernikahan dalam.</p>
+      <div class="simply-countdown"></div>
+      <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll(), playAudio();"><i class="bi bi-envelope"></i>
+        Lihat Undangan</a>
+    </main>
+  </section>
+  <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top mynavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Invitation</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Invitation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#info">Info</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#gifts">Gifts</a>
           </div>
         </div>
       </div>
-    </nav>
-    <section id="home" class="home" data-aos="fade-up">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center" data-aos="fade-up">
-            <h2>The Wedding</h2>
-            <h3>QS Ar-rum 21</h3>
-            <h3>
-             “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir”
-            </h3>
-          </div>
-        </div>
-        <div class="row couple mt-5" data-aos="fade-up">
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="row">
-              <div class="col-8 text-end">
-                <h3>Edi Kurnia</h3>
-                <p>
-                  Putra keempat dari Bapak Suherman (Alm) <br />
-                  dan <br />
-                  Ibu Yayah
-                </p>
-              </div>
-              <div class="col-4">
-                <img
-                  src="img/edi.jpg"
-                  alt="Edi Kurnia"
-                  srcset=""
-                  class="img-responsive rounded-circle"
-                />
-              </div>
-            </div>
-          </div>
-          <span class="heart"><i class="bi bi-heart-fill"></i></span>
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-4">
-                <img
-                  src="img/dewi.jpg"
-                  alt="Dewi Agustina"
-                  class="img-responsive rounded-circle"
-                />
-              </div>
-              <div class="col-8">
-                <h3>Dewi Agustina</h3>
-                <p>
-                  Putri kedua dari Bapak Kusnanto (Alm) <br />
-                  dan <br />
-                  Ibu Carwiah
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="info" class="info" data-aos="fade-up">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-10 text-center" data-aos="fade-up">
-            <h2>Informasi Acara</h2>
-            <p class="alamat">Kediaman mempelai wanita <br>
-                Kp. Cigugur Rt/Rw 001/004 Desa Indrajaya Kec.Salem Kab. Brebes</p>
-            <!-- <a href="http://" target="_blank" class="btn btn-light btn-sm my-4">lihat peta</a> -->
-          </div>
-          <div class="row row-cols-md-1 row-cols-sm-1 row-cols-1">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.4893635287094!2d108.76488177574275!3d-7.184865270517395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f77a40d3b968d%3A0xf4110949a6b23150!2sCigugur%2C%20Indrajaya%2C%20Salem%2C%20Brebes%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1717259757629!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-5 col-10">
-                <div class="card text-center text-bg-light mb-5">
-                    <div class="card-header">
-                      Akad Nikah
-                    </div>
-                    <div class="card-body">
-                      <div class="row justify-content-center" >
-                        <div class="col-md-6">
-                            <i class="bi bi-clock d-block"><span> 08.30 - 10.00</span></i>
-                            
-                        </div>
-                      <div class="row justify-content-center" >
-                        <div class="col-md-6">
-                            <i class="bi bi-calendar3 d-block"><span> Kamis, 27 Juni 2024</span></i>
-                            
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-            <div class="col-md-5 col-10">
-                <div class="card text-center text-bg-light">
-                    <div class="card-header">
-                     Resepsi - Selesai
-                    </div>
-                    <div class="card-body">
-                      <div class="row justify-content-center" >
-                        <div class="col-md-6">
-                            <i class="bi bi-clock d-block" ><span> 10.00 </span></i>
-                            
-                        </div>
-                      <div class="row justify-content-center" >
-                        <div class="col-md-6">
-                            <i class="bi bi-calendar3 d-block"> <span> Kamis, 27 Juni 2024</span></i>
-                           
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-      </div>
-    </section>
-    <section id="gallery" class="gallery" data-aos="fade-up">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-10 text-center" data-aos="fade-up">
-                    <span>Our Memory</span>
-                    <h2>Gallery Foto</h2>
-                </div>
-            </div>
-            <div class="row row-cols-md-3 row-cols-sm-2 row-cols-2">
-                <div class="col mt-3">
-                    <a href="img/1.jpeg" data-toggle="lightbox" data-gallery="mygallery">
-                    <img src="img/1.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
-                </a>
-                </div>
-                <div class="col mt-3">
-                    <a href="img/2.jpeg" data-toggle="lightbox" data-gallery="mygallery">
-                    <img src="img/2.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
-                </a>
-                </div>
-                <div class="col mt-3">
-                    <a href="img/3.jpeg" data-toggle="lightbox" data-gallery="mygallery">
-                    <img src="img/3.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
-                </a>
-                </div>
-                <div class="col mt-3">
-                    <a href="img/4.jpeg" data-toggle="lightbox" data-gallery="mygallery">
-                    <img src="img/4.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
-                </a>
-                </div>
-                <div class="col mt-3">
-                    <a href="img/5.jpeg" data-toggle="lightbox" data-gallery="mygallery">
-                    <img src="img/5.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
-                </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="gifts" class="gifts" data-aos="fade-up">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-10 text-center" data-aos="fade-up">
-                    <span>Ungkapkan Tanda Kasih</span>
-                    <h2>Kirim Hadiah</h2>
-                    <p>Bagi bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet di bawah ini:</p>
-                
-                </div>
-            </div>
-            <div class="row justify-content-center text-center data-aos="fade-up">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <div>BCA</div>
-                        12345678    
-                    </li>
-                    <li class="list-group-item">
-                        <div>Saweria</div>
-                        28973465028734
-                    </li>
-                  </ul>
-            </div>
-            <br>
-            <div class="row justify-content-center" data-aos="fade-up>
-                <div class="col-md-6">
-                    <div id="disqus_thread" >
-                      <script>
-                        /**
-                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                        /*
-                        var disqus_config = function () {
-                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        };
-                        */
-                        (function() { // DON'T EDIT BELOW THIS LINE
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://online-invitation.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                        })();
-                    </script>
-                    </div>
-                    
-                </div>
-            </div>
-
-        </div>
-    </section>    
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col text-center ">
-                    <small class="block">&copy; 2024 AD Wedding. All Right Reserved.</small>
-                    <small class="block"> Design by <a href="https://instagram.com/saiful_adi4">@saiful_adi4</a></small>
-                    <ul class="mt-3">
-                        <li>
-                            <i class="bi bi-instagram"></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="audio-container">
-        <audio id="song" autoplay loop>
-            <source src="music/Maher Zain-Baraka Allahu Lakuma.mp3 " type="audio/mpeg">
-
-        </audio>
-        <div class="audio-icon-wrapper" style="display : none;">
-            <i class="bi bi-disc"></i>
-        </div>
     </div>
-  
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </nav>
+  <section id="home" class="home" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center" data-aos="fade-up">
+          <h2>The Wedding</h2>
+          <h3>QS Ar-rum 21</h3>
+          <h3>
+            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
+            sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+            sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
+            berpikir”
+          </h3>
+        </div>
+      </div>
+      <div class="row couple mt-5" data-aos="fade-up">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="row">
+            <div class="col-8 text-end">
+              <h3>Edi Kurnia</h3>
+              <p>
+                Putra keempat dari Bapak Suherman (Alm) <br />
+                dan <br />
+                Ibu Yayah
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="img/edi.jpg" alt="Edi Kurnia" srcset="" class="img-responsive rounded-circle" />
+            </div>
+          </div>
+        </div>
+        <span class="heart"><i class="bi bi-heart-fill"></i></span>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-4">
+              <img src="img/dewi.jpg" alt="Dewi Agustina" class="img-responsive rounded-circle" />
+            </div>
+            <div class="col-8">
+              <h3>Dewi Agustina</h3>
+              <p>
+                Putri kedua dari Bapak Kusnanto (Alm) <br />
+                dan <br />
+                Ibu Carwiah
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="info" class="info" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center" data-aos="fade-up">
+          <h2>Informasi Acara</h2>
+          <p class="alamat">Kediaman mempelai wanita <br>
+            Kp. Cigugur Rt/Rw 001/004 Desa Indrajaya Kec.Salem Kab. Brebes</p>
+          <!-- <a href="http://" target="_blank" class="btn btn-light btn-sm my-4">lihat peta</a> -->
+        </div>
+        <div class="row row-cols-md-1 row-cols-sm-1 row-cols-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.4893635287094!2d108.76488177574275!3d-7.184865270517395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f77a40d3b968d%3A0xf4110949a6b23150!2sCigugur%2C%20Indrajaya%2C%20Salem%2C%20Brebes%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1717259757629!5m2!1sen!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-    <script src="countdown/simplyCountdown.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    
-      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5 col-10">
+          <div class="card text-center text-bg-light mb-5">
+            <div class="card-header">
+              Akad Nikah
+            </div>
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <i class="bi bi-clock d-block"><span> 08.30 - 10.00</span></i>
+
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"><span> Kamis, 27 Juni 2024</span></i>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-10">
+          <div class="card text-center text-bg-light">
+            <div class="card-header">
+              Resepsi - Selesai
+            </div>
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <i class="bi bi-clock d-block"><span> 10.00 </span></i>
+
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"> <span> Kamis, 27 Juni 2024</span></i>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="gallery" class="gallery" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center" data-aos="fade-up">
+          <span>Our Memory</span>
+          <h2>Gallery Foto</h2>
+        </div>
+      </div>
+      <div class="row row-cols-md-3 row-cols-sm-2 row-cols-2">
+        <div class="col mt-3">
+          <a href="img/1.jpeg" data-toggle="lightbox" data-gallery="mygallery">
+            <img src="img/1.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="img/2.jpeg" data-toggle="lightbox" data-gallery="mygallery">
+            <img src="img/2.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="img/3.jpeg" data-toggle="lightbox" data-gallery="mygallery">
+            <img src="img/3.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="img/4.jpeg" data-toggle="lightbox" data-gallery="mygallery">
+            <img src="img/4.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div class="col mt-3">
+          <a href="img/5.jpeg" data-toggle="lightbox" data-gallery="mygallery">
+            <img src="img/5.jpeg" alt="Gallery Image" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gifts" class="gifts" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center" data-aos="fade-up">
+          <span>Ungkapkan Tanda Kasih</span>
+          <h2>Kirim Hadiah</h2>
+          <p>Bagi <span></span> apabila ingin mengirimkan hadiah pernikahan dapat melalui Rekening berikut</p>
+
+        </div>
+      </div>
+      <div class="row justify-content-center text-center data-aos=" fade-up">
+        <div class="col-md-5 col-10">
+        <div class="card card-gift text-center text-bg-light mb-5">
+          <div class="card-header mx-3">
+            Bank Syariah Indonesia (BSI)
+          </div>
+          <div class="card-body px-3">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <span> 7181742978 <br>a.n <br> Dewi Agustina</span>
+
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-center" data-aos="fade-up>
+                <div class=" col-md-6">
+          <div id="disqus_thread">
+            <script>
+              /**
+              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+              var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              */
+              (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://online-invitation.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center ">
+          <small class="block">&copy; 2024 AD Wedding. All Right Reserved.</small>
+          <small class="block"> Design by <a href="https://instagram.com/saiful_adi4">@saiful_adi4</a></small>
+          <ul class="mt-3">
+            <li>
+              <i class="bi bi-instagram"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="audio-container">
+    <audio id="song" autoplay loop>
+      <source src="music/Maher Zain-Baraka Allahu Lakuma.mp3 " type="audio/mpeg">
+
+    </audio>
+    <div class="audio-icon-wrapper" style="display : none;">
+      <i class="bi bi-disc"></i>
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+<script src="countdown/simplyCountdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
-    
-        duration: 1300, // durasi animasi dalam milidetik
-        easing: 'ease-in-out', // easing animasi
-        once: false, // animasi hanya terjadi sekali saat di-scroll
-        offset: 200 // jarak sebelum elemen muncul (dalam pixel)
+
+    duration: 1300, // durasi animasi dalam milidetik
+    easing: 'ease-in-out', // easing animasi
+    once: false, // animasi hanya terjadi sekali saat di-scroll
+    offset: 200 // jarak sebelum elemen muncul (dalam pixel)
   });
 </script>
 
-      
-    <script>
-      simplyCountdown(".simply-countdown", {
-        year: 2024, // required
-        month: 6, // required
-        day: 27, // required
-        hours: 8, // Default is 0 [0-23] integer
-        minutes: 0, // Default is 0 [0-59] integer
-        seconds: 0, // Default is 0 [0-59] integer
-        words: {
-          //words displayed into the countdown
-          days: { singular: "day", plural: "days" },
-          hours: { singular: "hour", plural: "hours" },
-          minutes: { singular: "minute", plural: "minutes" },
-          seconds: { singular: "second", plural: "seconds" },
-        },
-        plural: true, //use plurals
-        inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
-        inlineClass: "simply-countdown-inline", //inline css span class in case of inline = true
-        // in case of inline set to false
-        enableUtc: false,
-        onEnd: function () {
-          // your code
-          return;
-        },
-        refresh: 1000, //default refresh every 1s
-        sectionClass: "simply-section", //section css class
-        amountClass: "simply-amount", // amount css class
-        wordClass: "simply-word", // word css class
-        zeroPad: false,
-        countUp: false, // enable count up if set to true
-      });
-    </script>
-    <script>
-        const rootElement = document.querySelector(':root');
-        const audioIconWrapper =  document.querySelector('.audio-icon-wrapper');
-        const  audioIcon = document.querySelector('.audio-icon-wrapper i');
 
-        const song = document.querySelector('#song');
-        let isPlaying = false;
+<script>
+  simplyCountdown(".simply-countdown", {
+    year: 2024, // required
+    month: 6, // required
+    day: 27, // required
+    hours: 8, // Default is 0 [0-23] integer
+    minutes: 0, // Default is 0 [0-59] integer
+    seconds: 0, // Default is 0 [0-59] integer
+    words: {
+      //words displayed into the countdown
+      days: { singular: "day", plural: "days" },
+      hours: { singular: "hour", plural: "hours" },
+      minutes: { singular: "minute", plural: "minutes" },
+      seconds: { singular: "second", plural: "seconds" },
+    },
+    plural: true, //use plurals
+    inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
+    inlineClass: "simply-countdown-inline", //inline css span class in case of inline = true
+    // in case of inline set to false
+    enableUtc: false,
+    onEnd: function () {
+      // your code
+      return;
+    },
+    refresh: 1000, //default refresh every 1s
+    sectionClass: "simply-section", //section css class
+    amountClass: "simply-amount", // amount css class
+    wordClass: "simply-word", // word css class
+    zeroPad: false,
+    countUp: false, // enable count up if set to true
+  });
+</script>
+<script>
+  const rootElement = document.querySelector(':root');
+  const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+  const audioIcon = document.querySelector('.audio-icon-wrapper i');
 
-        function disableScroll() {
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            scrollLeft = window.pagexOffset || document.documentElement.scrollLeft;
+  const song = document.querySelector('#song');
+  let isPlaying = false;
 
-            window.onscroll = function() {
-                window.scrollTo(scrollTop, scrollLeft);
-                rootElement.style.scrollBehavior = 'auto';
-            }
-        }
+  function disableScroll() {
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pagexOffset || document.documentElement.scrollLeft;
 
-        function enableScroll(){
-            window.onscroll = function() {
-                rootElement.style.scrollBehavior='smooth';
-                //localStorage.setItem('opened', 'true');
-            }
-        }
-        function playAudio () {
-            
-            song.volume=0.2;
-            audioIconWrapper.style.display = 'flex';
-            song.play();
-            isPlaying = true;
+    window.onscroll = function () {
+      window.scrollTo(scrollTop, scrollLeft);
+      rootElement.style.scrollBehavior = 'auto';
+    }
+  }
 
-        }
+  function enableScroll() {
+    window.onscroll = function () {
+      rootElement.style.scrollBehavior = 'smooth';
+      //localStorage.setItem('opened', 'true');
+    }
+  }
+  function playAudio() {
 
-        audioIconWrapper.onclick = function (){
-            if (isPlaying) {
-                song.pause();
-                audioIcon.classList.remove ('bi-disc');
-               audioIcon.classList.add('bi-pause-circle');
-            }else {
-                song.play();
-                audioIcon.classList.add ('bi-disc');
-                audioIcon.classList.remove('bi-pause-circle');
-            }
-            isPlaying = !isPlaying;
+    song.volume = 0.2;
+    audioIconWrapper.style.display = 'flex';
+    song.play();
+    isPlaying = true;
 
-        }
+  }
 
-        
-       // if (!localStorage.getItem('opened')) {
-         disableScroll();
-        //}
+  audioIconWrapper.onclick = function () {
+    if (isPlaying) {
+      song.pause();
+      audioIcon.classList.remove('bi-disc');
+      audioIcon.classList.add('bi-pause-circle');
+    } else {
+      song.play();
+      audioIcon.classList.add('bi-disc');
+      audioIcon.classList.remove('bi-pause-circle');
+    }
+    isPlaying = !isPlaying;
 
-    </script>
+  }
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    
-    <script>
-        const offcanvas = document.querySelector('.offcanvas');
-        const stickyTop = document.querySelector('.sticky-top');
 
-        offcanvas.addEventListener('show.bs.offcanvas', function(){
-            stickyTop.style.overflow = 'visible';
-        });
+  // if (!localStorage.getItem('opened')) {
+  disableScroll();
+  //}
 
-        offcanvas.addEventListener('hidden.bs.offcanvas', function(){
-            stickyTop.style.overflow = 'hidden';
-        });
+</script>
 
-    </script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const nama = urlParams.get('to') || '';
-        console.log(nama);
-        const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+<!-- Option 2: Separate Popper and Bootstrap JS -->
 
-        const namaContainer = document.querySelector('.hero h4 span')
-        namaContainer.innerText = nama;
-        namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
-    </script>
+<script>
+  const offcanvas = document.querySelector('.offcanvas');
+  const stickyTop = document.querySelector('.sticky-top');
+
+  offcanvas.addEventListener('show.bs.offcanvas', function () {
+    stickyTop.style.overflow = 'visible';
+  });
+
+  offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+    stickyTop.style.overflow = 'hidden';
+  });
+
+</script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const nama = urlParams.get('to') || '';
+  console.log(nama);
+  const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+
+  const namaContainer = document.querySelector('.hero h4 span');
+  const namaGifts = document.querySelector('.gifts p span')
+  namaContainer.innerText = nama;
+  namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+
+  namaGifts.innerText = nama;
+  namaGifts.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+  
+</script>
+
 </html>
